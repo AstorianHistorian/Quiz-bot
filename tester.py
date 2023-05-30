@@ -5,8 +5,8 @@ from csv import reader
 import random
 
 def test(update,responce):
-     msg = f"Проверка"
-
+    update.message.reply_text('Проверка')
+    return
 
 def sample_responses(input_text):
     user_message = str(input_text).lower()

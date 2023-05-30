@@ -36,7 +36,7 @@ def error(update, context):
     print(f"Update {update} caused error {context.error}")
 
 def main():
-    updater = Updater(keys.API_KEY, use_context=True)
+    updater = Updater(keys, use_context=True)
     dp = updater.dispatcher
 
     dp.add_handler(CommandHandler("start",start_command))
@@ -50,9 +50,6 @@ def main():
     updater.start_polling(5)
     updater.idle()
 
-def Get_trains(update,el='1'):
-    now = datetime.now(pytz.timezone('Europe/Moscow'))
-    current_time=now.strftime("%H:%M")
     
 
 main()
